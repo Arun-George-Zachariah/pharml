@@ -4,8 +4,10 @@
 
 import argparse
 from random import shuffle
-from readvox import read_map
 
+from sys import path
+path.append("/mydata/pharml/tools/mlvoxelizer/")
+from readvox import read_map
 
 ############################################################
 
