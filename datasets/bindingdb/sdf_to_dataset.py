@@ -355,7 +355,7 @@ if __name__ == "__main__":
     for pdbid in proteins:
         if pdbid not in rejected:
             accepted[pdbid] = proteins[pdbid]
-    stats = write_map_file(ligands,accepted)
+    stats = write_map_file(ligands, accepted, args.out)
     # Get some stats / distributions.
     bind = 0
     nobind = 0
