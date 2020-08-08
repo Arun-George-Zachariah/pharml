@@ -23,7 +23,7 @@ from rdkit.Chem import AllChem as Chem
 from rdkit.Chem import PandasTools
 from rdkit import RDLogger
 from Bio.PDB import *
-
+import time
 
 ############################################################
 
@@ -330,6 +330,9 @@ def convert_pdbs(proteins,outdir="data/",nworkers=16):
 
 
 if __name__ == "__main__":
+    # Auditing the start time.
+    start_time = time.time()
+
     # Parse command line args.
     parser = argparse.ArgumentParser()
     parser.add_argument('--sdf',     type=str,   required=True,   help='Path to SDF file.')
@@ -376,6 +379,8 @@ if __name__ == "__main__":
             num = dist[count] if count in dist else 0
             distf.write("%d %d\n"%(count,num))
     print("Success!")
-    
-    
+
+    # Printing time taken.
+    print("--- %s seconds ---" % (time.time() - start_time))
+
 ############################################################
