@@ -622,7 +622,12 @@ def main():
 
     
 if __name__== "__main__":
+    # Auditing the start time.
+    start_time = time.time()
+
     main()
 
+    # Printing time taken.
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 ############################################################
