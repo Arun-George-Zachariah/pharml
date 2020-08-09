@@ -6,7 +6,6 @@ scipy
 biopython
 
 # GNN requirements.
-tensorflow==1.15
 dm-sonnet==1.36
 matplotlib
 networkx
